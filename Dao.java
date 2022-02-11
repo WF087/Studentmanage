@@ -13,7 +13,14 @@ public class Dao {
 
     private static Connection getConn() {
         Connection conn =null;
-
+/*CREATE TABLE student{
+ * nmae vachar(255) NOT NULL,
+ * age varchar(255),
+ * grade1 varchar (255),
+ * grade2 varchar (255),
+ * grade3 varchar (255),
+ * PRIMARY KEY('name')
+ * }*/
         try {
             //加载 JDBC 桥的驱动程序
             Class.forName("com.mysql.cj.jdbc.Driver");
