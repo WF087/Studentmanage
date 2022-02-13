@@ -12,9 +12,9 @@ public class Control {
     public static void main(String[] args) throws SQLException {
         String name=null;
         String age=null;
-        String grade1=null;
-        String grade2=null;
-        String grade3=null;
+        int grade1;
+        int grade2;
+        int grade3;
         Scanner sc=null;
         do {
             //界面
@@ -32,9 +32,9 @@ public class Control {
                 sc=new Scanner(System.in);
                 name=sc.next();
                 age=sc.next();
-                grade1=sc.next();
-                grade2=sc.next();
-                grade3=sc.next();
+                grade1=Integer.parseInt(sc.next());
+                grade2=Integer.parseInt(sc.next());
+                grade3=Integer.parseInt(sc.next());
                
 				Dao.insert(new Student(name,age,grade1,grade2,grade3));
 		
@@ -56,11 +56,11 @@ public class Control {
                 sc=new Scanner(System.in);
                 name=sc.next();
                 age=sc.next();
-                grade1=sc.next();
-                grade2=sc.next();
-                grade3=sc.next();
+                grade1=Integer.parseInt(sc.next());
+                grade2=Integer.parseInt(sc.next());
+                grade3=Integer.parseInt(sc.next());
                 Dao.getAll();
-                Dao.updata(new Student(name,"",age,grade1,grade2,grade3));
+                Dao.updata(new Student(name,age,grade1,grade2,grade3));
                 break;
             case 4:
                 //查询数据

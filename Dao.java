@@ -16,9 +16,9 @@ public class Dao {
 /*CREATE TABLE student{
  * nmae vachar(255) NOT NULL,
  * age varchar(255),
- * grade1 varchar (255),
- * grade2 varchar (255),
- * grade3 varchar (255),
+ * grade1 int (255),
+ * grade2 int (255),
+ * grade3 int (255),
  * PRIMARY KEY('name')
  * }*/
         try {
@@ -62,9 +62,9 @@ public class Dao {
             //将获取到的 Name，Sex，Age 的数据插入到指定的位置
             pstmt.setString(1, student.getName());
             pstmt.setString(2, student.getAge());
-            pstmt.setString(3, student.getGrade1());
-            pstmt.setString(4, student.getGrade2());
-            pstmt.setString(5, student.getGrade3());
+            pstmt.setInt(3, student.getGrade1());
+            pstmt.setInt(4, student.getGrade2());
+            pstmt.setInt(5, student.getGrade3());
             i=pstmt.executeUpdate();
             pstmt.close();
             conn.close();
@@ -112,7 +112,7 @@ public class Dao {
     public static Integer getAll() {
         // Connection 接口代表与特定的数据库连接  并在连接上下文中执行sql 语句
         Connection conn= getConn();
-        String sql="select * from student";
+        String sql="select name,age,grade1,grade2,grade3,grade1 from student";
         //PreparedStatement类型执行动态的sql语句     Statement 执行静态语句
         PreparedStatement pstmt;
 

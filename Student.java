@@ -6,9 +6,9 @@ public class Student {
     
     private String Name;
     private String Age;
-    private String grade1;
-    private String grade2;
-    private String grade3;
+    private int grade1;
+    private int grade2;
+    private int grade3;
 
     //Get Set 方法的实现
    
@@ -24,27 +24,27 @@ public class Student {
     public void setAge(String age) {
         Age = age;
     }
-    public String getGrade1() {
+    public Integer getGrade1() {
         return grade1;
     }
-    public void setGrade1(String grade1) {
+    public void setGrade1(Integer grade1) {
         this.grade1 = grade1;
     }
-    public String getGrade2() {
+    public Integer getGrade2() {
         return grade2;
     }
-    public void setGrade2(String grade2) {
+    public void setGrade2(Integer grade2) {
         this.grade2 = grade2;
     }
    
-    public void setGrade3(String grade3) {
+    public void setGrade3(Integer grade3) {
     	this.grade3= grade3;
     }
-    public String getGrade3() {
+    public Integer getGrade3() {
     	return grade3;
     }
     //构造方法
-    public Student(String name, String age, String grade1, String grade2,  String grade3, String grade32) {
+    public Student(String name, String age, int grade1, int grade2,  int grade3, int grade32) {
         
         this.grade1 =grade1;
         Name = name;
@@ -52,14 +52,12 @@ public class Student {
         Age = age;
         this.grade3=grade3;
     }
-    public Student(String string, String string2, String string3, String string4, String string5) {
-        // TODO Auto-generated constructor stub
-       
+    public Student(String string, String string2, int int3, int int4, int int5) {
+        // TODO Auto-generated constructor stub      
         this.Name=string;
         this.Age=string2;
-        this.grade1=string3;
-        this.grade2=string4;
-        this.grade3=string5;
-        
+        this.grade1=int3;
+        this.grade2=int4;
+        this.grade3=int5;        
     }
 }
