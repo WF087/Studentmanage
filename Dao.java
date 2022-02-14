@@ -112,7 +112,7 @@ public class Dao {
     public static Integer getAll() {
         // Connection 接口代表与特定的数据库连接  并在连接上下文中执行sql 语句
         Connection conn= getConn();
-        String sql="select name,age,grade1,grade2,grade3,grade1 from student";
+        String sql="select name,age,grade1,grade2,grade3,grade1+grade2+grade3 AS SUM  from student order by(SUM) desc";
         //PreparedStatement类型执行动态的sql语句     Statement 执行静态语句
         PreparedStatement pstmt;
 
